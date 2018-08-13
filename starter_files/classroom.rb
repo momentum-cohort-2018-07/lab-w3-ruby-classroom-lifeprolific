@@ -2,11 +2,20 @@
 # for that student and assignment. Note that Ruby counts arrays from 0, but
 # we are referring to them as 1-10.
 
+def assignment_score (grade_hash, student_name, assignment_number)
+  grade_hash[student_name][assignment_number - 1]
+end
 
 # Given a grade_hash and assignment number, return all scores for that
 # assignment. Note that Ruby counts arrays from 0, but we are referring to
 # them as 1-10.
 
+def assignment_scores (grade_hash, assignment_number)
+  return_array = []
+  grade_hash.each do |key|
+    return_array << grade_hash[key][assignment_number - 1]
+  end
+end
 
 # Given a grade_hash and assignment number, return the average score for that
 # assignment. Note that Ruby counts arrays from 0, but we are referring to
