@@ -11,10 +11,7 @@ end
 # them as 1-10.
 
 def assignment_scores (grade_hash, assignment_number)
-  return_array = []
-  grade_hash.each do |key|
-    return_array << grade_hash[key][assignment_number - 1]
-  end
+  grade_hash.values.map {|grades| grades[assignment_number - 1]}
 end
 
 # Given a grade_hash and assignment number, return the average score for that
@@ -22,6 +19,7 @@ end
 # them as 1-10.
 
 def assignment_average_score (grade_hash, assignment_number)
+  assignment_scores(grade_hash, assignment_number).sum / assignment_scores(grade_hash, assignment_number).length
 end
 
 # Return a hash of students and their average score.
@@ -29,6 +27,7 @@ end
 # use .to_h. Also look at Hash#transform_values.
 
 def test_averages (grade_hash)
+  
 end
 
 # Return a letter grade for a numerical score.
@@ -39,6 +38,7 @@ end
 # < 60 => F
 
 def letter_grade(score)
+  (score/10).floor
 end
 
 # Return a hash of students and their final letter grade, as determined
