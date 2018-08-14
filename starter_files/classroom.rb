@@ -19,7 +19,8 @@ end
 # them as 1-10.
 
 def assignment_average_score (grade_hash, assignment_number)
-  assignment_scores(grade_hash, assignment_number).sum / assignment_scores(grade_hash, assignment_number).length
+  scores = assignment_scores(grade_hash, assignment_number)
+  scores.sum / scores.length
 end
 
 # Return a hash of students and their average score.
@@ -76,5 +77,7 @@ end
 # Return an array of the top `number_of_students` students.
 
 def top_students (grade_hash, number_of_students)
-  final_letter_grades(grade_hash).sort {|a,b| b[1]<=>a[1]}
+  student_hash = grade_hash.transform_values {|grades| grades.sum / grades.length}
+  sorted_hash = student_hash.sort_by{|key,value| value}.reverse
+  output = sorted_hash.slice(0, number_of_students).to_h.keys
 end
