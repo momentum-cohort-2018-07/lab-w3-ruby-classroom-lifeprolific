@@ -76,4 +76,5 @@ end
 # Return an array of the top `number_of_students` students.
 
 def top_students (grade_hash, number_of_students)
+  final_letter_grades(grade_hash).sort {|a,b| b[1]<=>a[1]}
 end
