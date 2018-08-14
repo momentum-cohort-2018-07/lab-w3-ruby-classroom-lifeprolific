@@ -78,6 +78,6 @@ end
 
 def top_students (grade_hash, number_of_students)
   student_hash = grade_hash.transform_values {|grades| grades.sum / grades.length}
-  sorted_hash = student_hash.sort_by{|key,value| value}.reverse
-  output = sorted_hash.slice(0, number_of_students).to_h.keys
+  sorted_array = student_hash.sort_by{|key,value| value}.reverse
+  output = sorted_array.slice(0, number_of_students).to_h.keys
 end
