@@ -44,12 +44,12 @@ class ClassroomTest < Minitest::Test
     assert_equal "F", letter_grade(2)
   end
 
-#   def test_final_letter_grades
-#     assert_equal "A", final_letter_grades(DATA)[:remy]
-#     assert_equal "B", final_letter_grades(DATA)[:kelly]
-#     assert_equal "B", final_letter_grades(DATA)[:indiana]
-#     assert_equal "F", final_letter_grades(DATA)[:chase]
-#   end
+  def test_final_letter_grades
+    assert_equal "A", final_letter_grades(DATA)[:remy]
+    assert_equal "B", final_letter_grades(DATA)[:kelly]
+    assert_equal "B", final_letter_grades(DATA)[:indiana]
+    assert_equal "F", final_letter_grades(DATA)[:chase]
+  end
 
 #   def test_class_average
 #     assert_equal 74, class_average(DATA)

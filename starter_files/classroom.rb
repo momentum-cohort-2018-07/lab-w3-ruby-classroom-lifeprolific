@@ -58,6 +58,7 @@ end
 # by their average.
 
 def final_letter_grades(grade_hash)
+  grade_hash.transform_values {|scores| letter_grade(scores.sum/scores.length)}
 end
 
 # Return the average for the entire class.
