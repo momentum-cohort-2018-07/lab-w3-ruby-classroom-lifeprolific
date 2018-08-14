@@ -64,6 +64,13 @@ end
 # Return the average for the entire class.
 
 def class_average(grade_hash)
+  sum = 0
+  count = 0
+  grade_hash.each_value do |grades|
+    sum += grades.sum
+    count += grades.count
+  end
+  sum/count
 end
 
 # Return an array of the top `number_of_students` students.

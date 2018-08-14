@@ -51,9 +51,9 @@ class ClassroomTest < Minitest::Test
     assert_equal "F", final_letter_grades(DATA)[:chase]
   end
 
-#   def test_class_average
-#     assert_equal 74, class_average(DATA)
-#   end
+  def test_class_average
+    assert_equal 74, class_average(DATA)
+  end
 
 #   def test_top_students
 #     assert_equal [:remy, :kelly, :indiana], top_students(DATA, 3)
