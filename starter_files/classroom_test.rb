@@ -36,7 +36,7 @@ class ClassroomTest < Minitest::Test
   end
 
   def test_letter_grade
-    assert_equal "A", letter_grade(1000)
+    assert_equal "A", letter_grade(100)
     assert_equal "A", letter_grade(92)
     assert_equal "B", letter_grade(84)
     assert_equal "C", letter_grade(70)
